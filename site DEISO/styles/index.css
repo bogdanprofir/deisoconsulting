@@ -1,0 +1,541 @@
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    background: linear-gradient(90deg, #000000, #3533cd);
+
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(90deg, #000000, #3533cd);
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  .nav-title {
+    background-image: url(/assets/logoDeiso.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 4rem;
+
+  }
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background: linear-gradient(90deg, #000000, #3533cd);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+  .heroContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    height: 100vh;
+  }
+  .heroContainer img {
+    width: 50%;
+    height: 100%;
+  }
+ .text__presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  padding: 0 5rem;
+   
+ }
+.text__presentation h1 {
+  font-size: 3.5rem;
+  color: #FFF;
+  font-family: 'Abril Fatface', cursive;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.text__presentation p {
+  font-size: 1.5rem;
+  color: #FFF;
+  margin-bottom: 2rem;
+  text-indent: 1rem;
+}
+.text__presentation button {
+  padding: 1rem 2rem;
+  background-color: greenyellow;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.text__presentation button:hover {
+  background-color: greenyellow;
+  color: black;
+  transform: scale(1.1);
+}
+
+.cotation {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  flex-direction: column;
+}
+
+.text__presentation a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cotation a {
+  text-decoration: none;
+  color: inherit;
+}
+  /* Despre noi */
+
+  .slider__section {
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    
+  }
+
+  #slider {
+  
+    width: 80%; /* Adjust this to control the width of the slider */
+    height: 25rem;
+    margin: auto; /* This will center the slider if it is less than 100% width */
+}
+
+.slide {
+  display: none;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide__content {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide__content img {
+    max-height: 10rem;
+    width: auto;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Abril Fatface', cursive;
+    color: #FFF;
+}
+
+.description {
+    margin-top: 1rem;
+    color: #FFF;
+}
+
+#dots {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+
+
+
+
+.servicii {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 5rem;
+  height: 100vh;
+  width: auto;
+  margin: 2rem;
+  
+  
+}
+
+.servicii h2 {
+  font-size: 1.5rem;
+  color: #FFF;
+  font-family: 'Abril Fatface', cursive;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  width: 30%;
+  color: #FFF;
+  line-height: 1.5rem;
+  height: 50rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+}
+
+.card h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: justify;
+  text-indent: 4px;
+  width: 100%;
+  height: 20rem;
+
+}
+.card img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.informatii {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+
+}
+
+.informatii h1 {
+  font-size: 1.5rem;
+  color: #000;
+  font-family: 'Abril Fatface', cursive;
+  margin-bottom: 2rem;
+}
+
+.cards  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.card__informatii {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    padding: 0 5rem;
+    margin: 0 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.card__informatii:hover {
+  transform: scale(1.1);
+}
+.card__informatii p {
+  text-indent: 10px;
+}
+.card__informatii img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 470px) {
+
+ .heroContainer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+ }
+ .text__presentation{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0;
+  
+ }
+ 
+
+ .text__presentation h1 {
+  font-size: 2rem;
+ }
+ .text__presentation p {
+  width: 175%;
+  text-align: justify;
+ 
+ }
+
+ .text__presentation a {
+  margin-top: 10px;
+ }
+
+ .slider__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .servicii {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: auto;
+  width: auto;
+  margin-top: 4rem;
+ }
+ .servicii p {
+  width: 120%;
+ }
+ .informatii {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  height: auto;
+ }
+ .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+ }
+ .card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+ }
+ .card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+ }
+ .card__text{
+  width: 120%;
+
+ }
+ .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+ }
+ .card__informatii {
+  margin: 0;
+  padding: 1rem;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+ }
+ 
+ }
+.footer__container {
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__container p {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+.footer__container a {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  text-decoration: none;
+}
+.footer__container a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+@media (max-width: 470px) {
+  .footer__container {
+    flex-direction: column;
+    justify-content: justify;
+    align-items: justify;
+  }
+}
