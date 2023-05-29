@@ -1,0 +1,19 @@
+.servicii-consultanta {
+    min-height: 80vh;
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .service-text {
+    margin: 20px 0;
+  }
+  
+  .cta-button {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+  }
+  

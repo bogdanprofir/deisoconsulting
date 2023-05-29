@@ -1,0 +1,19 @@
+.navLogo {
+    max-height: 13rem; /* adjust as needed */
+    width: 15rem;
+    height: 5.5rem;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    background: rgb(37, 35, 162);
+background: -moz-linear-gradient(90deg, rgba(53,51,205,1) 22%, rgba(84,194,40,1) 64%);
+background: -webkit-linear-gradient(90deg, rgba(53,51,205,1) 22%, rgba(84,194,40,1) 64%);
+background: linear-gradient(90deg, rgba(53,51,205,1) 22%, rgba(84,194,40,1) 64%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3533cd",endColorstr="#54c228",GradientType=1);
+  }
+
+  .servicii {
+    background:rgb(37, 35, 162);
+  }
