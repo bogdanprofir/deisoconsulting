@@ -16,7 +16,7 @@ function NavBar() {
             <NavDropdown.Item as={Link} to="/services/consultanta">Servicii Consultanta</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/services/marketing">Servicii Marketing</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link as={Link} to="/products">Produse</Nav.Link>
+          
           <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>

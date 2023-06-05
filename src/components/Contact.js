@@ -117,7 +117,7 @@ function ContactForm() {
     errors={state.errors}
   />
 
-  <ReCAPTCHA
+  <ReCAPTCHA className='recaptcha'
     sitekey="6LcL00smAAAAAL9n6zguJ6bAexOc21x3pUAVwLBW"
   />
 
